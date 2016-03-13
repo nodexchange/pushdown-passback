@@ -1,0 +1,6 @@
+{
+  "name": "pushup-passback",
+  "dependencies": {
+    "gsap": "^1.18.2"
+  }
+}

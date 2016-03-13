@@ -1,0 +1,166 @@
+<!-- canvasSize:320x480 -->
+<!--{{tokens.Copyrights}}-->
+<!--canvasSize:{{tokens.size}}-->
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>MRAID - Expandable Video</title>
+    <meta charset="UTF-8">
+    <meta HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: #ccc;
+      }
+
+      nav {
+        display: block;
+        position: absolute;
+        top:0px;
+        right:0px;
+    width: 40px;
+    height: 40px;
+    text-align: right;
+    z-index: 300002;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin: 8px;
+}
+#panel {
+    position: absolute;
+    right: 0;
+    width: 70%;
+    top: 0;
+    bottom: 0;
+    box-shadow: 0px 0px 15px black;
+    background: white;
+    padding: 10px;
+    -webkit-transform-origin: 100% 50%;
+    -webkit-transform: scaleX(0.00001);
+    -webkit-transition: -webkit-transform 0.2s ease-in-out;
+    outline: 0;
+    z-index: 300005;
+}
+#panel:target {
+    -webkit-transform: scaleX(1);
+}
+
+.clearDebugButton {
+  text-decoration: none;
+  color: black;
+  position: fixed;
+  top:35px;
+  right: 17px;
+  cursor: pointer;
+}
+.closeDebugButton {
+  text-decoration: none;
+  color: black;
+  position: fixed;
+  top:10px;
+  right: 15px;
+}
+
+.textClass {
+ -webkit-animation: color_change 1s infinite alternate;
+ -moz-animation: color_change 1s infinite alternate;
+ -ms-animation: color_change 1s infinite alternate;
+ -o-animation: color_change 1s infinite alternate;
+ animation: color_change 1s infinite alternate;
+}
+
+@-webkit-keyframes color_change {
+ from { color: white; }
+ to { color: green; }
+}
+@-moz-keyframes color_change {
+ from { color: white; }
+ to { color: green; }
+}
+@-ms-keyframes color_change {
+ from { color: white; }
+ to { color: green; }
+}
+@-o-keyframes color_change {
+ from { color: white; }
+ to { color: green; }
+}
+@keyframes color_change {
+ from { color: white; }
+ to { color: green; }
+}
+#logs {
+  overflow:scroll;
+  height: 95%;
+}
+p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 14px;
+}
+    </style>
+  </head>
+  <body>
+    <!-- new change -->
+    <nav>
+      <a href="#panel" class="textClass">&#9776;</a>
+    </nav>
+
+    <div id="adPreview">
+      <script type="text/javascript">
+        adtechCanvasAdPreview = true;
+        try {
+          console.log('212253', '[Peform] Mobile Web - Video Interstitial - Excusive - M.Sites');
+        } catch (e) {}
+
+        var rmLibVersion = '2.53.3'.split('.');
+        var rmlib_major_version = rmLibVersion[0];
+        var rmlib_minor_version = rmLibVersion[1];
+        var revision = rmLibVersion[2];
+        if (rmlib_major_version <= 2 && rmlib_minor_version < 5) {
+          var adtechAdCallback = adtechAdCallback || {};
+          //adtechAdCallback[1456688358438] = new com.adtech.AdPreviewCallbackHandler();
+        } else {
+          var adtechAdCallbacks = adtechAdCallbacks || {};
+          adtechAdCallbacks[1456688358438] = adtechAdCallbacks[1456688358438] || [];
+          //adtechAdCallbacks[1456688358438].push(new com.adtech.AdPreviewCallbackHandler());
+        }
+        var adtechAdConfig =   $include('./extras/adConfig.json');
+        $include('./extras/customAd.js');
+      </script>
+    </div>
+    <div id="panel">
+      <a class="closeDebugButton" href="#">&#10006;</a>
+      <h3>Debug Menu</h3>
+      <div id="logs"></div>
+      <div class="clearDebugButton">&#8709;</a>
+    </div>
+    <script>
+    if (typeof console  != "undefined")
+    if (typeof console.log != 'undefined')
+        console.olog = console.log;
+    else
+        console.olog = function() {};
+
+console.log = function(message) {
+    console.olog(message);
+    var logs = document.getElementById('logs');
+    var p = document.createElement('p');
+    p.innerHTML = message;
+    logs.appendChild(p);
+};
+console.error = console.debug = console.info =  console.log;
+var clear = document.getElementsByClassName('clearDebugButton')[0];
+clear.addEventListener('click', function() {
+  var logs = document.getElementById('logs');
+  logs.innerHTML = '';
+});
+    </script>
+  </body>
+</html>

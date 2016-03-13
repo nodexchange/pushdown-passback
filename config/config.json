@@ -1,0 +1,30 @@
+{
+  "tokens": {
+    "rmURL": "./../local/",
+    "coreURL": "./../local/ADTECH_1_9_7.js",
+    "assetsURL": "http://localhost:3000/deploy/",
+    "canvasID": "212253",
+    "size": "970x250",
+    "adWidth": "970",
+    "adHeight": "250",
+    "unit": "px",
+    "Copyrights": "Copyright 2010-2016 AOL Platforms.",
+    "Author": "Martin Wojtala"
+  },
+  "mainFile": "pushup-passback.html",
+  "contentProperties": {
+    "Clickthrough": "https://ad.doubleclick.net/ddm/clk/300049047;127005073;",
+    "Passback": "images/970x250.jpg",
+    "CloseButton": {
+      "Width": 36,
+      "Height": 36,
+      "Close Button Image": "images/fancybox_sprite.svg"
+    }
+  },
+  "main": {
+    "author": "Marcin Wojtala",
+    "name": "1C",
+    "title": "Pushup Passback Billboard",
+    "version": "0.1"
+  }
+}
