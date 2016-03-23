@@ -23,9 +23,6 @@ $1CPP.core.prototype = {
     self.container.className = 'container';
     document.body.appendChild(self.container);
     self.passbackContainer = new $1CPP.passbackContainer(self.settings.Passback);
-    self.passbackContainer.getContainer().addEventListener('click', function() {
-      self.clickHandler();
-    });
     self.container.appendChild(self.passbackContainer.getContainer());
     self.closeButton = new $1CPP.closeButton(self.settings.CloseButton);
     self.container.appendChild(self.closeButton.getButton());

@@ -3,9 +3,24 @@
 <head>
 <title>Passback</title>
 <meta charset="UTF-8">
-<SCRIPT SRC="http://ib.adnxs.com/ttj?id=6340274&cb=[CACHEBUSTER]&psa=false&pubclick=[INSERT_CLICK_TAG]" TYPE="text/javascript"></SCRIPT>
+<SCRIPT SRC="" TYPE="text/javascript"></SCRIPT>
+<style>
+html, body {
+  background: #123456;
+}
 
+</style>
 </head>
 <body>
+  <div id="advert">
+  </div>
+  <script>
+  var ADTECH = ADTECH || parent.ADTECH;
+    ADTECH.ready(function() {
+      //var passbackurl = 'http://adserver.adtech.de/addyn/3.0/1176/4451983/573618/0/;AdId=14277911;BnId=-1;;misc=_ADTIME_;rdclick=_ADCLICKDEC_';
+      var passbackurl = ADTECH.getContent('Passback');
+      document.write('<s' + 'cript lang' + 'uage="jav' + 'ascript" src="' + passbackurl + '"></' + 'scr' + 'ipt>');
+    })
+  </script>
   </body>
 </html>

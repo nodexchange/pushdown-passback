@@ -8,7 +8,7 @@ $1CPP.passbackContainer = function(settings) {
 
   var iframeContent = document.createElement('iframe');
     iframeContent.scrolling = 'no';
-    iframeContent.frameborder = 'no';
+    iframeContent.frameBorder = '0';
     iframeContent.src = ADTECH.getFileUrlById('Passback','passback.html');
     iframeContent.width = 970;
     iframeContent.height = 250;

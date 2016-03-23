@@ -13,8 +13,7 @@
   },
   "mainFile": "pushup-passback.html",
   "contentProperties": {
-    "Clickthrough": "https://ad.doubleclick.net/ddm/clk/300049047;127005073;",
-    "Passback": "images/970x250.jpg",
+    "Passback": "http://ib.adnxs.com/ttj?id=6340274&cb=[CACHEBUSTER]&psa=false&pubclick=[INSERT_CLICK_TAG]",
     "CloseButton": {
       "Width": 36,
       "Height": 36,

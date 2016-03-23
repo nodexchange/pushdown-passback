@@ -80,3 +80,24 @@ Available advanced settings inside `gulpfile.js`:
 
 ##Sourcemaps
 Sourcemaps are bugged now on [gulp-minify-css](https://github.com/jonathanepollack/gulp-minify-css/issues/34) and on [gulp-concat](https://github.com/wearefractal/gulp-concat)
+
+##backup
+var settings = 'http://adserver.adtech.de/addyn/3.0/1176/4451983/573618/0/;AdId=14277911;BnId=-1;;misc=[CACHEBUSTER];rdclick={clickurl}';
+
+var iframeContent = document.createElement('iframe');
+  iframeContent.scrolling = 'no';
+  iframeContent.frameBorder = '0';
+  iframeContent.width = 970;
+  iframeContent.height = 250;
+  iframeContent.allowtransparency = 'true';
+  var cachebusterValue = Math.ceil(Math.random() * 10000);
+  settings = settings.replace('[CACHEBUSTER]', cachebusterValue);
+  var htmlText = '<!DOCTYPE html><html><head><title>Passback</title><meta charset="UTF-8">'+
+    '<style>html, body {background: #123456;}</style>'+
+    '</head><body>' +
+    '<SCRIPT SRC="'+
+    settings+' '+
+    'TYPE="text/javascript"></SCRIPT>'+
+    '</body></html>';
+iframeContent.src = 'data:text/html;charset=utf-8,' + encodeURI(htmlText);
+  this.container.appendChild(iframeContent);
