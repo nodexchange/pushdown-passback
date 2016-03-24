@@ -24,14 +24,22 @@ $1CPP.core.prototype = {
     document.body.appendChild(self.container);
     self.passbackContainer = new $1CPP.passbackContainer(self.settings.Passback);
     self.container.appendChild(self.passbackContainer.getContainer());
+
     self.closeButton = new $1CPP.closeButton(self.settings.CloseButton);
     self.container.appendChild(self.closeButton.getButton());
-    TweenLite.to(self.container, 0.5, {top:"0px"});
-    TweenLite.to(self.container, 1, {top:"170px", ease:Back.easeOut, delay:1.2});
+
+    self.passbackContainer.getIFrame().onload = function(event) {
+      //  var iframe = self.passbackContainer.getIFrame();
+      //  var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+      TweenLite.to(self.container, 0.5, {top:"0px"});
+      TweenLite.to(self.container, 1, {top:"170px", ease:Back.easeOut, delay:1.2});
+
+      setTimeout(function() {
+        TweenLite.to(self.closeButton.getButton(), 0.5, {opacity:"1"});
+      }, 2500);
+    };
+
     self.closeButton.getButton().style.opacity = 0;
-    setTimeout(function() {
-      TweenLite.to(self.closeButton.getButton(), 0.5, {opacity:"1"});
-    }, 2500);
 
     self.container.addEventListener('mouseover', function(event) {
       console.log(event.target.nodeName);

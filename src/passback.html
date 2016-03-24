@@ -19,9 +19,9 @@ html, body {
   <script>
   var ADTECH = ADTECH || parent.ADTECH;
     ADTECH.ready(function() {
-      var passbackurl = 'http://adserver.adtech.de/addyn/3.0/1176/4451983/573618/0/;AdId=14340037;BnId=-1;;misc=';
+      //var passbackurl = 'http://adserver.adtech.de/addyn/3.0/1176/4451983/573618/0/;AdId=14340037;BnId=-1;;misc=';
       //var passbackurl = 'http://adserver.adtech.de/addyn/3.0/1176/4451983/573618/0/;AdId=14277911;BnId=-1;;misc=_ADTIME_;rdclick=_ADCLICKDEC_';
-      //var passbackurl = ADTECH.getContent('Passback');
+      var passbackurl = ADTECH.getContent('Passback');
       document.write('<s' + 'cript lang' + 'uage="jav' + 'ascript" src="' + passbackurl + '"></' + 'scr' + 'ipt>');
     })
   </script>
