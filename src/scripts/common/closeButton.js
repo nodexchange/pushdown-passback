@@ -8,7 +8,7 @@ $1CPP.closeButton.prototype = {
   setupButton: function() {
       this.closeButtonContainer = document.createElement('div');
       this.closeButtonContainer.className = 'closeButton';
-      this.closeButtonContainer.style.right = '0px';
+      this.closeButtonContainer.style.right = this.settings['Offset right']+'px';
       this.closeButtonContainer.style.top = '0px';
       this.closeButtonContainer.style.position = 'absolute';
       this.closeButtonContainer.style.overflow = 'hidden';

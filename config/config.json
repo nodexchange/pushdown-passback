@@ -17,6 +17,7 @@
     "CloseButton": {
       "Width": 36,
       "Height": 36,
+      "Offset right":0,
       "Close Button Image": "images/fancybox_sprite.svg"
     }
   },
